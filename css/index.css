@@ -13,8 +13,8 @@
   src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
 }
 /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 html,
 body,
@@ -148,22 +148,6 @@ table {
 /* Variables */
 /* End Variables */
 /* Mix-ins */
-.full-width {
-  margin: 0 auto;
-  width: 100%;
-}
-.two-thirds {
-  margin: 0 auto;
-  width: 66%;
-}
-.thirds {
-  margin: 0 auto;
-  width: 33%;
-}
-.halves {
-  margin: 0 auto;
-  width: 50%;
-}
 /* End Mix-ins */
 /* Start Styles */
 html,
@@ -171,6 +155,9 @@ body {
   height: 100%;
   font-size: 10px;
   font-weight: 400;
+  background-color: #d5d4d2;
+  color: #020402;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 h1,
 h2,
@@ -180,6 +167,7 @@ h5,
 h6 {
   font-family: 'Audiowide', cursive;
   display: block;
+  margin: 1em auto;
 }
 h1 {
   font-size: 4em;
@@ -207,16 +195,11 @@ h6 {
 }
 p {
   font-family: 'Roboto Condensed', sans-serif;
-}
-.gdm-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #e5e4e2;
-  color: #020402;
+  margin: 0 0 1em 0;
 }
 .gdm-section {
   display: flex;
+  justify-content: stretch ;
   flex-direction: column;
   border-bottom: #D6ED17 2px solid;
   color: #020402;
@@ -244,6 +227,11 @@ header {
   justify-content: stretch;
   width: 100%;
   margin: 0.5em auto;
+}
+.img-respond {
+  width: 100%;
+  max-width: 480px;
+  margin: 1em auto;
 }
 .nav-li {
   background-color: #D6ED17;
@@ -281,18 +269,19 @@ header {
 }
 .shortside-col {
   margin: 0 auto;
-  width: 33%;
+  width: 32%;
 }
 .longside-col {
   margin: 0 auto;
-  width: 66%;
+  width: 65%;
 }
 .evenside-col {
   margin: 0 auto;
-  width: 50%;
+  width: 49%;
 }
 .row {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
   width: 100%;
 }

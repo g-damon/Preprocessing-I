@@ -74,22 +74,22 @@ table {
 
 /* Mix-ins */
 
-.full-width {
+.full-width() {
 	margin: 0 auto;
 	width: 100%;
 }
 
-.two-thirds {
+.two-thirds() {
 	margin: 0 auto;
 	width: 65%;
 }
 
-.thirds {
+.thirds() {
 	margin: 0 auto;
 	width: 32%;
 }
 
-.halves {
+.halves() {
 	margin: 0 auto;
 	width: 49%;
 }
@@ -110,6 +110,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: @cursive;
 	display: block;
+	margin: 1em auto;
 }
 
 h1 {
@@ -144,6 +145,7 @@ h6 {
 
 p {
 	font-family: @sans;
+	margin: 0 0 1em 0;
 }
 
 
@@ -182,6 +184,12 @@ header {
 		margin: 0.5em auto;
 	} // end nav-links
 } // end nav
+
+.img-respond {
+	width: 100%;
+	max-width: 480px;
+	margin: 1em auto;
+}
 
 .nav-li {
 	background-color: @offset;
