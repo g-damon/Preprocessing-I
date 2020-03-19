@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Roboto+Condensed&display=swap');
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -57,7 +59,8 @@ table {
 /* My Added Styles */
 
 /* Variables */
-
+@cursive: 'Audiowide', cursive;
+@sans: 'Roboto Condensed', sans-serif;
 @offset: #D6ED17;
 @offset-hover: #e7fe28;
 @bck-color: #020402;
@@ -69,6 +72,11 @@ table {
 /* End Variables */
 
 /* Mix-ins */
+
+.full-width {
+	margin: 0 auto;
+	width: 100%;
+}
 
 .two-thirds {
 	margin: 0 auto;
@@ -93,6 +101,11 @@ html, body {
 	height: 100%;
 	font-size: 10px;
 	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @cursive;
+	display: block;
 }
 
 h1 {
@@ -125,55 +138,103 @@ h6 {
 	font-weight: 600;
 }
 
+p {
+	font-family: @sans;
+}
+
 .gdm-container {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-evenly;
 	background-color: @second;
 	color: @bck-color;
 }
 
 .gdm-section {
+	display: flex;
+	flex-direction: column;
 	border-bottom: @offset 2px solid;
 	color: @bck-color;
 	padding: 2% auto 2% auto;
+	width: 100%;
 }
 
 /* Header and Nav */
 
 header {
 	display: flex;
-	justify-content:space-between;
-	line-height: 5em;
-	height: 5em;
+	justify-content: center;
+	line-height: 3em;
+	height: 3em;
 	width: 100%;
 }
 
-nav.gdm-nav  {
+.gdm-nav{
 	display: flex;
 	justify-content: stretch;
 	background-color: @bck-color;
-	margin: 0 0 2em 0;
+	padding: 0.2em auto;
+	height:  3em;
+	width: 100%;
 
 	ul.nav-links {
 		display: flex;
 		justify-content: stretch;
-
-	 li {
-		 background-color: @offset;
-		 border-radius: 5px;
-		 color: @bck-color;
-	 } // end li
-
+		width: 100%;
+		margin: 0.5em auto;
 	} // end nav-links
-
 } // end nav
 
+.nav-li {
+	background-color: @offset;
+	border-radius: 5px;
+	color: @bck-color;
+	padding: 0 0.8em;
+	margin: 0 0.4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a{
+		color: @bck-color;
+
+		:hover, :active, :focus {
+			color: @bck-hover;
+		}
+	}// end a
+
+	:hover, :active, :focus {
+		background-color: @offset-hover;
+		color: @bck-hover;
+	}
+
+} // end li
 
 .gdm-logo {
+	background-color: @bck-color;
 	background-image: url(../img/GDM-Logo_green.png);
 	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat;
 	max-height: 51px;
 	max-width: 200px;
+	width: 200px;
+}
+
+.shortside-col {
+	.thirds();
+}
+
+.longside-col {
+	.two-thirds();
+}
+
+.evenside-col {
+
+	.halves();
+}
+
+.row {
+	display: block;
+	.full-width();
 }
