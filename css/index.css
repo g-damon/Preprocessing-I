@@ -135,3 +135,45 @@ body {
   height: 100%;
 }
 /* My Added Styles */
+/* Variables */
+/* End Variables */
+/* Mix-ins */
+.two-thirds {
+  margin: 0 auto;
+  width: 66%;
+}
+.thirds {
+  margin: 0 auto;
+  width: 33%;
+}
+.halves {
+  margin: 0 auto;
+  width: 50%;
+}
+/* End Mix-ins */
+/* Start Styles */
+.gdm-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #e5e4e2;
+  color: #020402;
+}
+.gdm-section {
+  border-bottom: #D6ED17 2px solid;
+  color: #020402;
+}
+/* Header and Nav */
+.gdm-nav {
+  display: flex;
+  justify-content: stretch;
+  background-color: #020402;
+}
+.nav-links {
+  display: flex;
+  justify-content: stretch;
+}
+.nav-links li {
+  background-color: #D6ED17;
+  border-radius: 5px;
+  color: #020402;
+}

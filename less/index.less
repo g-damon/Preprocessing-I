@@ -58,3 +58,72 @@ html, body {
 }
 
 /* My Added Styles */
+
+/* Variables */
+
+@offset: #D6ED17;
+@offset-hover: #e7fe28;
+@bck-color: #020402;
+@bck-hover: #131513;
+@second: #e5e4e2;
+@scnd-hover: #f6f5f3;
+
+
+/* End Variables */
+
+/* Mix-ins */
+
+.two-thirds {
+	margin: 0 auto;
+	width: 66%;
+}
+
+.thirds {
+	margin: 0 auto;
+	width: 33%;
+}
+
+.halves {
+	margin: 0 auto;
+	width: 50%;
+}
+
+/* End Mix-ins */
+
+/* Start Styles */
+
+.gdm-container {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: @second;
+	color: @bck-color;
+}
+
+.gdm-section {
+	border-bottom: @offset 2px solid;
+	color: @bck-color;
+}
+
+/* Header and Nav */
+
+.gdm-nav {
+	display: flex;
+	justify-content: stretch;
+	background-color: @bck-color;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: stretch;
+
+ li {
+	 background-color: @offset;
+	 border-radius: 5px;
+	 color: @bck-color;
+
+ }
+}
+
+.gdm-logo {
+
+}
