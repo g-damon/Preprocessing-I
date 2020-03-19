@@ -53,9 +53,6 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-}
 
 /* My Added Styles */
 
@@ -92,6 +89,42 @@ html, body {
 
 /* Start Styles */
 
+html, body {
+	height: 100%;
+	font-size: 10px;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 1.7em;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+h6 {
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
 .gdm-container {
 	display: flex;
 	justify-content: space-evenly;
@@ -102,28 +135,45 @@ html, body {
 .gdm-section {
 	border-bottom: @offset 2px solid;
 	color: @bck-color;
+	padding: 2% auto 2% auto;
 }
 
 /* Header and Nav */
 
-.gdm-nav {
+header {
+	display: flex;
+	justify-content:space-between;
+	line-height: 5em;
+	height: 5em;
+	width: 100%;
+}
+
+nav.gdm-nav  {
 	display: flex;
 	justify-content: stretch;
 	background-color: @bck-color;
-}
+	margin: 0 0 2em 0;
 
-.nav-links {
-	display: flex;
-	justify-content: stretch;
+	ul.nav-links {
+		display: flex;
+		justify-content: stretch;
 
- li {
-	 background-color: @offset;
-	 border-radius: 5px;
-	 color: @bck-color;
+	 li {
+		 background-color: @offset;
+		 border-radius: 5px;
+		 color: @bck-color;
+	 } // end li
 
- }
-}
+	} // end nav-links
+
+} // end nav
+
 
 .gdm-logo {
-
+	background-image: url(../img/GDM-Logo_green.png);
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	max-height: 51px;
+	max-width: 200px;
 }
