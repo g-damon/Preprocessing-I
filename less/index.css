@@ -232,14 +232,14 @@ p {
   font-size: 1.6em;
 }
 /* Header and Nav */
-header {
+header .navbar {
   display: flex;
   justify-content: space-between;
   line-height: 3em;
   height: 3em;
   width: 100%;
 }
-header .gdm-logo {
+header .navbar .gdm-logo {
   background-color: #020402;
   background-image: url(../img/GDM-Logo_green.png);
   background-size: contain;
@@ -249,7 +249,7 @@ header .gdm-logo {
   max-width: 200px;
   width: 200px;
 }
-header .gdm-nav {
+header .navbar .gdm-nav {
   padding: 0.2em auto;
   margin-left: 7em;
   height: 3em;
@@ -258,36 +258,36 @@ header .gdm-nav {
   justify-content: right;
 }
 @media (max-width: 600px) {
-  header .gdm-nav {
+  header .navbar .gdm-nav {
     flex-direction: column;
     justify-content: center;
   }
 }
-header .gdm-nav ul.nav-links {
+header .navbar .gdm-nav ul.nav-links {
   width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 @media (max-width: 950px) {
-  header .gdm-nav ul.nav-links {
+  header .navbar .gdm-nav ul.nav-links {
     width: 70%;
   }
 }
 @media (max-width: 750px) {
-  header .gdm-nav ul.nav-links {
+  header .navbar .gdm-nav ul.nav-links {
     width: 85%;
   }
 }
 @media (max-width: 600px) {
-  header .gdm-nav ul.nav-links {
+  header .navbar .gdm-nav ul.nav-links {
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-content: space-around;
   }
 }
-header .gdm-nav ul.nav-links li.nav-li a {
+header .navbar .gdm-nav ul.nav-links li.nav-li a {
   color: #020402 !important;
   background-color: #D6ED17 !important;
   padding: 0 0.8em;
@@ -296,7 +296,7 @@ header .gdm-nav ul.nav-links li.nav-li a {
   margin-bottom: 0;
   border-radius: 5px;
 }
-header .gdm-nav ul.nav-links li.nav-li a:hover {
+header .navbar .gdm-nav ul.nav-links li.nav-li a:hover {
   color: #e7fe28 !important;
   background-color: #131513 !important;
   margin-bottom: 2px;
@@ -359,6 +359,12 @@ header .gdm-nav ul.nav-links li.nav-li a:hover {
   flex-direction: column;
   color: #D6ED17;
   width: 100%;
+  height: 100vh;
+}
+@media (max-width: 1000px) {
+  #info {
+    height: auto;
+  }
 }
 @media (max-width: 600px) {
   #info {
