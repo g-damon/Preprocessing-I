@@ -362,9 +362,6 @@ header .navbar #pc-menu ul.nav-links li.nav-li a:hover {
     display: none;
   }
 }
-header .navbar #phone-menu {
-  display: none;
-}
 #intro {
   background-image: linear-gradient(to bottom, rgba(10, 255, 10, 0.3), rgba(0, 19, 0, 0.7)), url(../img/dmd-MOON-logo.jpg);
   background-size: cover;
@@ -419,6 +416,7 @@ header .navbar #phone-menu {
   margin: 1em, 1.5em;
   line-height: 2em;
   text-align: center;
+  margin-bottom: 3em;
 }
 #intro p .primary-btn:hover {
   color: #e7fe28;
@@ -503,20 +501,14 @@ header .navbar #phone-menu {
     align-items: center;
   }
 }
-.open {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.open ul.nav-links {
+ul.nav-links {
   width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
 }
-.open ul.nav-links li.nav-li a {
+ul.nav-links li.nav-li a {
   color: #020402 !important;
   background-color: #D6ED17 !important;
   padding: 1em 0.8em;
@@ -524,8 +516,101 @@ header .navbar #phone-menu {
   margin-bottom: 1px;
   border-radius: 5px;
 }
-.open ul.nav-links li.nav-li a:hover {
+ul.nav-links li.nav-li a:hover {
   color: #e7fe28 !important;
   background-color: #131513 !important;
   margin-bottom: 2px;
+}
+.phone-menu {
+  display: none;
+}
+@media (max-width: 700px) {
+  .phone-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.phone-menu #menuToggle {
+  display: block;
+  position: relative;
+  top: 5em;
+  right: 5em;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.phone-menu #menuToggle a {
+  text-decoration: none;
+  color: #D6ED17;
+  transition: color 0.3s ease;
+}
+.phone-menu #menuToggle a:hover {
+  color: lime;
+}
+.phone-menu #menuToggle input {
+  display: block;
+  width: 4em;
+  height: 3.2em;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+.phone-menu #menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #e7fe28;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+.phone-menu #menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+.phone-menu #menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+.phone-menu #menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+.phone-menu #menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.phone-menu #menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+.phone-menu #menu {
+  position: absolute;
+  background-color: #D6ED17;
+  color: #020402;
+  width: 30em;
+  margin: -10em 0 0 -5em;
+  padding: 5em;
+  padding-top: 12.5em;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.phone-menu #menu li {
+  padding: 1em 0;
+  font-size: 2em;
+}
+.phone-menu #menuToggle input:checked ~ ul {
+  transform: none;
 }
