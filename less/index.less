@@ -310,7 +310,14 @@ header {
 	position: fixed;
 	background-color: @bck-color;
 	width: 100%;
-	height: auto;
+	height: fit-content;
+	max-height: 7em;
+
+	@media (max-width: 900px) {
+		height: 3em;
+		line-height: 3em;
+
+	}
 
 	.navbar {
 		display: flex;
@@ -319,21 +326,6 @@ header {
 		height: 3em;
 		width: 100%;
 
-		.menu-toggle {
-			display: none;
-
-			@media (max-width: 700px) {
-				display: inline-block;
-				padding: .75em 1.5em;
-				line-height: 3em;
-				font-size: 2em;
-				color: @offset  !important;
-
-				&:hover {
-					color: @offset-hover;
-				}
-			}
-		}
 
 		.gdm-logo {
 			background-color: @bck-color;
@@ -341,9 +333,10 @@ header {
 			background-size: contain;
 			background-position: center center;
 			background-repeat: no-repeat;
-			max-height: 51px;
-			max-width: 200px;
-			width: 200px;
+			max-height: 6.7em;
+			max-width: 25em;
+			height: 5em;
+			width: 20em;
 		}
 
 		#pc-menu {
@@ -582,28 +575,6 @@ header {
 }
 
 
-ul.nav-links {
-	width: 80%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-
-	li.nav-li a {
-		color: @bck-color  !important;
-		background-color: @offset  !important;
-		padding: 1em 0.8em;
-		text-decoration: none;
-		margin-bottom: 1px;
-		border-radius: 5px;
-
-		&:hover {
-			color: @offset-hover  !important;
-			background-color: @bck-hover  !important;
-			margin-bottom: 2px;
-		}
-	}
-}
 
 .phone-menu {
 	display: none;
@@ -615,10 +586,10 @@ ul.nav-links {
 		align-items: center;
 	}
 		#menuToggle {
-			display: block;
+			display: inline-block;
 			position: relative;
-			top: 5em;
-			right: 5em;
+			top: 0.5em;
+			right: 2em;
 
 			z-index: 1;
 
@@ -638,36 +609,31 @@ ul.nav-links {
 
 
 			#menuToggle input {
-				display: block;
+				display: inline-block;
 				width: 4em;
 				height: 3.2em;
 				position: absolute;
-				top: -7px;
-				left: -5px;
+				top: -0.7em;
+				left: -0.5em;
 
 				cursor: pointer;
 
 				opacity: 0;
-				/* hide this */
 				z-index: 2;
-				/* and place it over the hamburger */
 
 				-webkit-touch-callout: none;
 			}
 
 			#menuToggle span {
-				display: block;
-				width: 33px;
-				height: 4px;
-				margin-bottom: 5px;
+				display: inline-block;
+				width: 3.3em;
+				height: 0.4em;
+				margin-bottom: 0.5em;
 				position: relative;
-
-				background: @offset-hover;
-				border-radius: 3px;
-
+				background: @offset;
+				border-radius: 0.3em;
 				z-index: 1;
-
-				transform-origin: 4px 0px;
+				transform-origin: 0.4em 0;
 
 				transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
 					opacity 0.55s ease;
@@ -684,7 +650,7 @@ ul.nav-links {
 			#menuToggle input:checked~span {
 				opacity: 1;
 				transform: rotate(45deg) translate(-2px, -1px);
-				background: #232323;
+				background: @offset-hover;
 			}
 
 
@@ -700,16 +666,16 @@ ul.nav-links {
 
 			#menu {
 				position: absolute;
-				background-color: @offset;
-				color: @bck-color;
+				background-color: @bck-color;
+				color: @offset;
 				width: 30em;
-				margin: -10em 0 0 -5em;
+				margin: 0 0 -10em -5em;
 				padding: 5em;
 				padding-top: 12.5em;
 				list-style-type: none;
 				-webkit-font-smoothing: antialiased;
 				transform-origin: 0% 0%;
-				transform: translate(-100%, 0);
+				transform: translate(100%, 0);
 				transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 			}
 
