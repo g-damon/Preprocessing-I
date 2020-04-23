@@ -214,7 +214,7 @@ h6 {
 }
 p {
   font-family: 'Roboto Condensed', sans-serif;
-  margin: 0 0 1em 0;
+  margin: 0.5em;
   font-size: 1.5em;
 }
 @media (max-width: 600px) {
@@ -224,19 +224,22 @@ p {
 }
 .caps {
   text-transform: capitalize;
+  text-align: center;
 }
 .uppercase {
   text-transform: uppercase;
+  text-align: center;
 }
 .big {
   font-size: 1.6em;
+  margin-left: 1em;
 }
 /* Header and Nav */
 header {
   position: fixed;
-  background-color: #020402;
+  background-color: rgba(0, 0, 0, 0.45);
   width: 100%;
-  height: fit-content;
+  height: 10vh;
   max-height: 7em;
 }
 @media (max-width: 900px) {
@@ -249,7 +252,7 @@ header .navbar {
   display: flex;
   justify-content: space-between;
   line-height: 3em;
-  height: 3em;
+  height: 4em;
   width: 100%;
 }
 header .navbar .gdm-logo {
@@ -258,10 +261,32 @@ header .navbar .gdm-logo {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  max-height: 5em;
-  max-width: 20em;
   height: 5em;
   width: 20em;
+}
+@media (max-width: 1000px) {
+  header .navbar .gdm-logo {
+    height: 4em;
+    width: 18em;
+  }
+}
+@media (max-width: 900px) {
+  header .navbar .gdm-logo {
+    height: 3.5em;
+    width: 17em;
+  }
+}
+@media (max-width: 800px) {
+  header .navbar .gdm-logo {
+    height: 3em;
+    width: 15em;
+  }
+}
+@media (max-width: 700px) {
+  header .navbar .gdm-logo {
+    height: 2.5em;
+    width: 14em;
+  }
 }
 header .navbar #pc-menu {
   padding: 0.2em auto;
@@ -372,8 +397,8 @@ header .navbar #pc-menu ul.nav-links li.nav-li a:hover {
   text-shadow: #020402 -3px 3px;
   font-size: 8em;
   font-weight: 800;
-  text-align: center;
   text-transform: uppercase;
+  text-align: center;
   margin-top: 55vh;
 }
 @media (max-width: 1000px) {
@@ -396,8 +421,8 @@ header .navbar #pc-menu ul.nav-links li.nav-li a:hover {
   text-shadow: #020402 -3px 3px;
   font-size: 3em;
   font-weight: 800;
-  text-align: center;
   text-transform: capitalize;
+  text-align: center;
   margin-bottom: 1%;
 }
 #intro p .primary-btn {
@@ -523,20 +548,20 @@ header .navbar #pc-menu ul.nav-links li.nav-li a:hover {
   color: lime;
 }
 .phone-menu #menuToggle input {
-  display: inline-block;
-  width: 4em;
-  height: 3.2em;
+  display: block;
+  width: 2em;
+  height: 1.6em;
   position: absolute;
-  top: -0.7em;
+  top: -0.2em;
   left: -0.5em;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
   -webkit-touch-callout: none;
 }
-.phone-menu #menuToggle span {
-  display: inline-block;
-  width: 3.3em;
+.phone-menu #menuToggle span.bar {
+  display: block;
+  width: 3.2em;
   height: 0.4em;
   margin-bottom: 0.5em;
   position: relative;
@@ -569,9 +594,8 @@ header .navbar #pc-menu ul.nav-links li.nav-li a:hover {
   background-color: #020402;
   color: #D6ED17;
   width: 30em;
-  margin: 0 0 -10em -5em;
-  padding: 5em;
-  padding-top: 12.5em;
+  margin: 0 0 -30em -10em;
+  padding: 2em;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;

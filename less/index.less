@@ -149,6 +149,7 @@ table {
 @offset-hover: #e7fe28;
 @offset-link: #0fae90;
 @offset-link-hover: #0a96a0;
+@RGB-bck-color: rgba(0, 0, 0, 0.45);
 @bck-color: #020402;
 @bck-hover: #131513;
 @second: #d5d4d2;
@@ -283,7 +284,7 @@ h6 {
 
 p {
 	font-family: @sans;
-	margin: 0 0 1em 0;
+	margin: 0.5em;
 	font-size: 1.5em;
 
 	@media (max-width: 600px) {
@@ -294,23 +295,26 @@ p {
 
 .caps {
 	text-transform: capitalize;
+	text-align: @centext;
 }
 
 .uppercase {
 	text-transform: uppercase;
+	text-align: @centext;
 }
 
 .big {
 	font-size: 1.6em;
+	margin-left: 1em;
 }
 
 /* Header and Nav */
 
 header {
 	position: fixed;
-	background-color: @bck-color;
+	background-color: @RGB-bck-color;
 	width: 100%;
-	height: fit-content;
+	height: 10vh;
 	max-height: 7em;
 
 	@media (max-width: 900px) {
@@ -323,7 +327,7 @@ header {
 		display: flex;
 		justify-content: space-between;
 		line-height: 3em;
-		height: 3em;
+		height: 4em;
 		width: 100%;
 
 
@@ -333,10 +337,28 @@ header {
 			background-size: contain;
 			background-position: center center;
 			background-repeat: no-repeat;
-			max-height: 5em;
-			max-width: 20em;
 			height: 5em;
 			width: 20em;
+
+			@media (max-width: 1000px) {
+				height: 4em;
+				width: 18em;
+			}
+
+			@media (max-width: 900px) {
+				height: 3.5em;
+				width: 17em;
+			}
+
+			@media (max-width: 800px) {
+				height: 3em;
+				width: 15em;
+			}
+
+			@media (max-width: 700px) {
+				height: 2.5em;
+				width: 14em;
+			}
 		}
 
 		#pc-menu {
@@ -609,11 +631,11 @@ header {
 
 
 			#menuToggle input {
-				display: inline-block;
-				width: 4em;
-				height: 3.2em;
+				display: block;
+				width: 2em;
+				height: 1.6em;
 				position: absolute;
-				top: -0.7em;
+				top: -0.2em;
 				left: -0.5em;
 
 				cursor: pointer;
@@ -624,9 +646,9 @@ header {
 				-webkit-touch-callout: none;
 			}
 
-			#menuToggle span {
-				display: inline-block;
-				width: 3.3em;
+			#menuToggle span.bar {
+				display: block;
+				width: 3.2em;
 				height: 0.4em;
 				margin-bottom: 0.5em;
 				position: relative;
@@ -669,9 +691,8 @@ header {
 				background-color: @bck-color;
 				color: @offset;
 				width: 30em;
-				margin: 0 0 -10em -5em;
-				padding: 5em;
-				padding-top: 12.5em;
+				margin: 0 0 -30em -10em;
+				padding: 2em;
 				list-style-type: none;
 				-webkit-font-smoothing: antialiased;
 				transform-origin: 0% 0%;
